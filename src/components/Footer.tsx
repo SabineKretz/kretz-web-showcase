@@ -8,7 +8,13 @@ const Footer = () => {
         <p className="mt-1 font-display text-sm italic text-background/60">
           Fotografie & Design
         </p>
-        <p className="mt-4 font-body text-xs text-background/40 tracking-wide">
+        <a
+          href="/impressum"
+          className="mt-4 inline-block font-body text-xs text-background/60 tracking-wide hover:text-background/90 transition-colors"
+        >
+          Impressum
+        </a>
+        <p className="mt-2 font-body text-xs text-background/40 tracking-wide">
           © {new Date().getFullYear()} Sabine Kretz Hochzeitsfotografie. Alle Rechte vorbehalten.
         </p>
       </div>
