@@ -7,12 +7,12 @@ import portfolio5 from "@/assets/portfolio-5.jpg";
 import portfolio6 from "@/assets/portfolio-6.jpg";
 
 const images = [
-  { src: portfolio1, alt: "Hochzeitsstrauß", area: "a" },
-  { src: portfolio2, alt: "Brautpaar Kuss in Schwarzweiß", area: "b" },
-  { src: portfolio3, alt: "Braut im Wald", area: "c" },
-  { src: portfolio4, alt: "Eheringe Detail", area: "d" },
-  { src: portfolio5, alt: "Brautpaar tanzt bei Sonnenuntergang", area: "e" },
-  { src: portfolio6, alt: "Romantisches Brautpaar Portrait", area: "f" },
+  { src: portfolio1, alt: "Hochzeitsstrauß" },
+  { src: portfolio2, alt: "Brautpaar Kuss in Schwarzweiß" },
+  { src: portfolio3, alt: "Braut im Wald" },
+  { src: portfolio5, alt: "Brautpaar tanzt bei Sonnenuntergang" },
+  { src: portfolio4, alt: "Eheringe Detail" },
+  { src: portfolio6, alt: "Romantisches Brautpaar Portrait" },
 ];
 
 const PortfolioSection = () => {
@@ -36,18 +36,7 @@ const PortfolioSection = () => {
           </p>
         </motion.div>
 
-        <div
-          className="grid gap-3 md:gap-4"
-          style={{
-            gridTemplateColumns: "1fr 1fr 1fr",
-            gridTemplateRows: "200px 200px 200px",
-            gridTemplateAreas: `
-              "a b c"
-              "a d c"
-              "e d f"
-            `,
-          }}
-        >
+        <div className="grid grid-cols-3 gap-1">
           {images.map((img, i) => (
             <motion.div
               key={i}
@@ -55,8 +44,7 @@ const PortfolioSection = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="overflow-hidden group cursor-pointer"
-              style={{ gridArea: img.area }}
+              className="overflow-hidden group cursor-pointer aspect-[4/3]"
             >
               <img
                 src={img.src}
