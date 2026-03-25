@@ -1,18 +1,13 @@
 import { motion } from "framer-motion";
-import portfolio1 from "@/assets/portfolio-1.jpg";
-import portfolio2 from "@/assets/portfolio-2.jpg";
-import portfolio3 from "@/assets/portfolio-3.jpg";
-import portfolio4 from "@/assets/portfolio-4.jpg";
-import portfolio5 from "@/assets/portfolio-5.jpg";
-import portfolio6 from "@/assets/portfolio-6.jpg";
 
 const images = [
-  { src: portfolio1, alt: "Hochzeitsstrauß" },
-  { src: portfolio2, alt: "Brautpaar Kuss in Schwarzweiß" },
-  { src: portfolio3, alt: "Braut im Wald" },
-  { src: portfolio5, alt: "Brautpaar tanzt bei Sonnenuntergang" },
-  { src: portfolio4, alt: "Eheringe Detail" },
-  { src: portfolio6, alt: "Romantisches Brautpaar Portrait" },
+  { src: "https://picsum.photos/seed/photo1/600/400", alt: "Foto 1" },
+  { src: "https://picsum.photos/seed/photo2/600/400", alt: "Foto 2" },
+  { src: "https://picsum.photos/seed/photo3/600/400", alt: "Foto 3", span: true },
+  { src: "https://picsum.photos/seed/photo4/600/400", alt: "Foto 4" },
+  { src: "https://picsum.photos/seed/photo5/600/400", alt: "Foto 5" },
+  { src: "https://picsum.photos/seed/photo6/600/400", alt: "Foto 6" },
+  { src: "https://picsum.photos/seed/photo7/600/400", alt: "Foto 7" },
 ];
 
 const PortfolioSection = () => {
@@ -36,7 +31,10 @@ const PortfolioSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-3 gap-1">
+        <div
+          className="grid grid-cols-3"
+          style={{ gap: "3px", gridAutoRows: "220px" }}
+        >
           {images.map((img, i) => (
             <motion.div
               key={i}
@@ -44,12 +42,13 @@ const PortfolioSection = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="overflow-hidden group cursor-pointer aspect-[4/3]"
+              className="overflow-hidden group cursor-pointer"
+              style={img.span ? { gridRow: "span 2" } : undefined}
             >
               <img
                 src={img.src}
                 alt={img.alt}
-                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 loading="lazy"
               />
             </motion.div>
