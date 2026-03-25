@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer className="bg-foreground py-10 px-6">
