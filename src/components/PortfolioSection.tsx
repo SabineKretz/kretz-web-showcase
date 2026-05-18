@@ -8,7 +8,7 @@ const images = [
   { src: "https://picsum.photos/seed/photo2/600/400", alt: "Portfolio 2" },
   { src: "https://picsum.photos/seed/photo3/600/400", alt: "Portfolio 3", span: true },
   { src: portfolioWindow, alt: "Brautpaar am Fenster" },
-  { src: "https://picsum.photos/seed/photo5/600/400", alt: "Portfolio 5" },
+  { src: portfolioCar, alt: "Brautpaar mit Hochzeitsauto" },
   { src: "https://picsum.photos/seed/photo6/600/400", alt: "Portfolio 6" },
   { src: "https://picsum.photos/seed/photo7/600/400", alt: "Portfolio 7" },
   { src: portfolioKiss, alt: "Brautpaar Kuss" },
