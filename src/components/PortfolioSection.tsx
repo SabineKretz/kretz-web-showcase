@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import portfolioKiss from "@/assets/portfolio-kiss.jpg";
 
 const images = [
   { src: "https://picsum.photos/seed/photo1/600/400", alt: "Portfolio 1" },
@@ -8,6 +9,7 @@ const images = [
   { src: "https://picsum.photos/seed/photo5/600/400", alt: "Portfolio 5" },
   { src: "https://picsum.photos/seed/photo6/600/400", alt: "Portfolio 6" },
   { src: "https://picsum.photos/seed/photo7/600/400", alt: "Portfolio 7" },
+  { src: portfolioKiss, alt: "Brautpaar Kuss" },
 ];
 
 const PortfolioSection = () => {
