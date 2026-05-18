@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import portfolioKiss from "@/assets/portfolio-kiss.jpg";
 import portfolioWindow from "@/assets/portfolio-window.jpg";
+import portfolioCar from "@/assets/portfolio-car.jpg";
 
 const images = [
   { src: "https://picsum.photos/seed/photo1/600/400", alt: "Portfolio 1" },
