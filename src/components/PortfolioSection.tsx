@@ -1,19 +1,13 @@
 import { motion } from "framer-motion";
 
-const columns = [
-  [
-    { src: "https://image.jimcdn.com/app/cms/image/transf/dimension=682x2048:format=jpg/path/s000058100d1a830c/image/ifc3d8393edf4e14a/version/1496864182/image.jpg", alt: "Hochzeitsfoto Brautpaar", aspect: "3/2" },
-    { src: "https://image.jimcdn.com/app/cms/image/transf/dimension=682x2048:format=jpg/path/s000058100d1a830c/image/iff6e8a0fa040610b/version/1509303054/image.jpg", alt: "Hochzeitsfoto Portrait", aspect: "3/4" },
-  ],
-  [
-    { src: "https://image.jimcdn.com/app/cms/image/transf/dimension=682x2048:format=jpg/path/s000058100d1a830c/image/i4ed583b1356c703b/version/1509303054/image.jpg", alt: "Hochzeitsfoto Zeremonie", aspect: "3/2" },
-    { src: "https://image.jimcdn.com/app/cms/image/transf/dimension=682x2048:format=jpg/path/s000058100d1a830c/image/i143f3d4376c1bf34/version/1509303054/image.jpg", alt: "Hochzeitsfoto Detail", aspect: "3/2" },
-    { src: "https://image.jimcdn.com/app/cms/image/transf/none/path/s000058100d1a830c/image/iebaf3f2a31245f1f/version/1509303043/image.jpg", alt: "Hochzeitsfoto Feier", aspect: "3/2" },
-  ],
-  [
-    { src: "https://image.jimcdn.com/app/cms/image/transf/dimension=682x2048:format=jpg/path/s000058100d1a830c/image/i51b8dc84e85be706/version/1509303054/image.jpg", alt: "Hochzeitsfoto Braut", aspect: "3/4" },
-    { src: "https://image.jimcdn.com/app/cms/image/transf/dimension=682x2048:format=jpg/path/s000058100d1a830c/image/i700557322f2d8513/version/1509303047/image.jpg", alt: "Hochzeitsfoto Paar", aspect: "3/2" },
-  ],
+const images = [
+  { src: "https://picsum.photos/seed/photo1/600/400", alt: "Portfolio 1" },
+  { src: "https://picsum.photos/seed/photo2/600/400", alt: "Portfolio 2" },
+  { src: "https://picsum.photos/seed/photo3/600/400", alt: "Portfolio 3", span: true },
+  { src: "https://picsum.photos/seed/photo4/600/400", alt: "Portfolio 4" },
+  { src: "https://picsum.photos/seed/photo5/600/400", alt: "Portfolio 5" },
+  { src: "https://picsum.photos/seed/photo6/600/400", alt: "Portfolio 6" },
+  { src: "https://picsum.photos/seed/photo7/600/400", alt: "Portfolio 7" },
 ];
 
 const PortfolioSection = () => {
@@ -37,28 +31,27 @@ const PortfolioSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-3" style={{ gap: "3px" }}>
-          {columns.map((col, colIndex) => (
-            <div key={colIndex} className="flex flex-col" style={{ gap: "3px" }}>
-              {col.map((img, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, scale: 0.97 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: (colIndex * 2 + i) * 0.08 }}
-                  className="overflow-hidden group cursor-pointer"
-                >
-                  <img
-                    src={img.src}
-                    alt={img.alt}
-                    className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
-                    loading="lazy"
-                    style={{ aspectRatio: img.aspect }}
-                  />
-                </motion.div>
-              ))}
-            </div>
+        <div
+          className="grid grid-cols-3"
+          style={{ gap: "3px", gridAutoRows: "220px" }}
+        >
+          {images.map((img, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, scale: 0.97 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: i * 0.08 }}
+              className="overflow-hidden group cursor-pointer"
+              style={img.span ? { gridRow: "span 2" } : undefined}
+            >
+              <img
+                src={img.src}
+                alt={img.alt}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                loading="lazy"
+              />
+            </motion.div>
           ))}
         </div>
       </div>
