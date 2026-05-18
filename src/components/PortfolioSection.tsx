@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import portfolioKiss from "@/assets/portfolio-kiss.jpg";
 import portfolioWindow from "@/assets/portfolio-window.jpg";
 import portfolioCar from "@/assets/portfolio-car.jpg";
+import portfolioLove from "@/assets/portfolio-love.jpg";
 
 const images = [
   { src: "https://picsum.photos/seed/photo1/600/400", alt: "Portfolio 1" },
@@ -9,7 +10,7 @@ const images = [
   { src: "https://picsum.photos/seed/photo3/600/400", alt: "Portfolio 3", span: true },
   { src: portfolioWindow, alt: "Brautpaar am Fenster" },
   { src: portfolioCar, alt: "Brautpaar mit Hochzeitsauto" },
-  { src: "https://picsum.photos/seed/photo6/600/400", alt: "Portfolio 6" },
+  { src: portfolioLove, alt: "Brautpaar mit LOVE-Schriftzug" },
   { src: "https://picsum.photos/seed/photo7/600/400", alt: "Portfolio 7" },
   { src: portfolioKiss, alt: "Brautpaar Kuss" },
 ];
