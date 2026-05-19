@@ -44,10 +44,7 @@ const BlogSection = () => {
                   />
                 </div>
                 <div className="pt-5">
-                  <p className="font-body text-xs uppercase tracking-[0.2em] text-muted-foreground">
-                    {post.date}
-                  </p>
-                  <h3 className="font-display text-xl md:text-2xl text-foreground mt-2 group-hover:text-accent transition-colors">
+                  <h3 className="font-display text-xl md:text-2xl text-foreground group-hover:text-accent transition-colors">
                     {post.title}
                   </h3>
                   <p className="font-body text-muted-foreground mt-3 leading-relaxed line-clamp-2">

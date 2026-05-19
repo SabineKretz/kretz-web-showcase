@@ -39,19 +39,11 @@ const BlogPost = () => {
           style={{ background: "var(--hero-overlay)" }}
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="font-body text-xs uppercase tracking-[0.3em] text-primary-foreground/80"
-          >
-            {post.date}
-          </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-display text-3xl md:text-5xl text-primary-foreground mt-3 max-w-3xl"
+            className="font-display text-3xl md:text-5xl text-primary-foreground max-w-3xl"
           >
             {post.title}
           </motion.h1>
