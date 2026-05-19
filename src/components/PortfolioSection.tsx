@@ -4,11 +4,12 @@ import portfolioWindow from "@/assets/portfolio-window.jpg";
 import portfolioCar from "@/assets/portfolio-car.jpg";
 import portfolioLove from "@/assets/portfolio-love.jpg";
 import portfolioDance from "@/assets/portfolio-dance.jpg";
+import portfolioWillow from "@/assets/portfolio-willow.jpg";
 
 const images = [
-  { src: portfolioDance, alt: "Brautpaar tanzt vor Hochzeitsauto" },
+  { src: portfolioWillow, alt: "Brautpaar unter Trauerweide am See" },
   { src: "https://picsum.photos/seed/photo2/600/400", alt: "Portfolio 2" },
-  { src: "https://picsum.photos/seed/photo3/600/400", alt: "Portfolio 3", span: true },
+  { src: portfolioDance, alt: "Brautpaar tanzt vor Hochzeitsauto", span: true },
   { src: portfolioCar, alt: "Brautpaar mit Hochzeitsauto" },
   { src: portfolioLove, alt: "Brautpaar mit LOVE-Schriftzug", span: true },
   { src: portfolioKiss, alt: "Brautpaar Kuss" },
